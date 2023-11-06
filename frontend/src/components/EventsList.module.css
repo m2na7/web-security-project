@@ -1,0 +1,40 @@
+.events {
+  margin: 2rem auto;
+  max-width: 36rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px;
+  border-style: solid;
+}
+
+.item a:hover {
+  transform: scale(1.02);
+}
+
+.item img {
+  width: 60%;
+  object-fit: cover;
+  margin: 1rem auto; 
+  display: block;
+
+}
+
+.content {
+  height: 12rem;
+  padding: 1rem;
+}
+.item h2 {
+  margin: 0 0 1rem 0;
+}
