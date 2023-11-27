@@ -15,3 +15,6 @@ frontend와 backend 둘 다 각각의 터미널에서 실행해야 됩니다
 `$ yarn`
 
 `$ yarn start`
+
+크롬 바로가기 만들기
+& "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/ChromeDevSesion"
