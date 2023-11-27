@@ -70,6 +70,16 @@ function EventForm({ method, event }) {
           defaultValue={event ? event.description : ""}
         />
       </p>
+      <p>
+        <label htmlFor="url">URL : </label>
+        <input
+          id="url"
+          type="url"
+          name="url"
+          defaultValue={event ? event.url : ""}
+        />
+      </p>
+
       <div className={classes.actions}>
         <button type="button" onClick={cancelHandler} disabled={isSubmitting}>
           Cancel
@@ -93,13 +103,14 @@ export async function action({ request, params }) {
     image: data.get("image"),
     date: data.get("date"),
     description: data.get("description"),
+    url: data.get("url"), // 추가
   };
 
   let url = "http://localhost:8080/events";
 
   if (method === "PATCH") {
     const eventId = params.eventId;
-    url = "http://localhost:8080/events/" + eventId;
+    url = `http://localhost:8080/events/${eventId}`;
   }
 
   const token = getAuthToken();
@@ -121,4 +132,5 @@ export async function action({ request, params }) {
   }
 
   return redirect("/events");
+
 }
